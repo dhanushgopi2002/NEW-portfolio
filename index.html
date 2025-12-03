@@ -27,9 +27,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(15, 32, 39, 0.9);
+            background: rgba(15, 32, 39, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
 
         .logo {
@@ -116,22 +117,20 @@
         }
 
         .social-links a {
-            width: 45px;
-            height: 45px;
+            padding: 12px 25px;
             border: 2px solid #00d9ff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border-radius: 25px;
             color: #00d9ff;
             text-decoration: none;
             transition: all 0.3s;
+            font-weight: 600;
         }
 
         .social-links a:hover {
             background: #00d9ff;
             color: #0f2027;
             transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 217, 255, 0.4);
         }
 
         .download-btn {
@@ -201,9 +200,10 @@
             border: 5px solid #00d9ff;
             box-shadow: 0 10px 50px rgba(0, 217, 255, 0.3);
             z-index: 1;
+            background: linear-gradient(135deg, #00d9ff, #00ff88);
         }
 
-        /* About Section */
+        /* Section */
         .section {
             min-height: 100vh;
             padding: 100px 50px;
@@ -231,11 +231,15 @@
 
         .skill-card {
             background: rgba(0, 217, 255, 0.1);
-            padding: 30px;
+            padding: 30px 20px;
             border-radius: 15px;
             text-align: center;
             border: 2px solid transparent;
             transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
 
         .skill-card:hover {
@@ -244,10 +248,15 @@
             box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
         }
 
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
         .skill-card h3 {
             color: #00d9ff;
-            font-size: 20px;
-            margin-top: 15px;
+            font-size: 18px;
         }
 
         /* Projects Section */
@@ -299,6 +308,56 @@
             font-size: 14px;
         }
 
+        /* Certifications Section */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .cert-card {
+            background: rgba(0, 217, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .cert-card:hover {
+            border-color: #00d9ff;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+        }
+
+        .cert-card h3 {
+            color: #00d9ff;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .cert-card p {
+            color: #b8c5d6;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .cert-link {
+            display: inline-block;
+            color: #00ff88;
+            text-decoration: none;
+            padding: 8px 20px;
+            border: 2px solid #00ff88;
+            border-radius: 20px;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .cert-link:hover {
+            background: #00ff88;
+            color: #0f2027;
+        }
+
         /* Contact Section */
         .contact-info {
             display: grid;
@@ -341,9 +400,12 @@
                 font-size: 42px;
             }
 
+            nav {
+                padding: 15px 20px;
+            }
+
             .nav-links {
-                flex-direction: column;
-                gap: 10px;
+                gap: 15px;
             }
 
             .image-container {
@@ -356,17 +418,22 @@
                 width: 280px;
                 height: 280px;
             }
+
+            .section {
+                padding: 80px 20px;
+            }
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo">Portfolio.</div>
+        <div class="logo">Portfolio</div>
         <ul class="nav-links">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Project</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -380,12 +447,10 @@
                 Innovative and detail-oriented Front-End Developer passionate about creating responsive and user-friendly websites. Proactive and adaptable with strong communication, time management skills, and experience in version control systems.
             </p>
             <div class="social-links">
-                <a href="https://facebook.com" target="_blank">f</a>
-                <a href="https://twitter.com" target="_blank">t</a>
-                <a href="https://instagram.com" target="_blank">i</a>
-                <a href="https://linkedin.com" target="_blank">in</a>
+                <a href="https://www.linkedin.com/in/dhanush-r-50367837b" target="_blank">LinkedIn</a>
+                <a href="https://github.com/dhanushgopi2002" target="_blank">GitHub</a>
             </div>
-            <button class="download-btn" onclick="window.print()">Download CV</button>
+            <a href="https://drive.google.com/file/d/1BDLKCA8WH7xes-xbaCJd2Js3Yh9wk8jy/view?usp=drive_link" download class="download-btn" style="display: inline-block; text-decoration: none;">Download My Resume</a>
         </div>
         <div class="hero-image">
             <div class="image-container">
@@ -399,7 +464,7 @@
         <h2 class="section-title">About Me</h2>
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
             <p style="font-size: 18px; line-height: 1.8; color: #b8c5d6;">
-                I'm pursuing my Master of Computer Application from Vels Institute of Science, Technology & Advanced Studies (VISTAS) with a CGPA of 7.6. Currently undergoing Web Design Training by Magic Bus India Foundation, learning modern technologies including HTML, CSS, JavaScript, Bootstrap, React, WordPress, UI/UX, Figma, Photoshop, and Illustrator.
+                I'm pursuing my Master of Computer Application from Vels Institute of Science, Technology & Advanced Studies (VISTAS) with a CGPA of 7.6. I have completed Web Design Training by Magic Bus India Foundation, where I learned modern technologies including HTML, CSS, JavaScript, Bootstrap, React, WordPress, UI/UX, Figma, Photoshop, and Illustrator. I am seeking an opportunity to leverage full stack coding skills and grow as a professional programmer.
             </p>
         </div>
     </section>
@@ -408,31 +473,52 @@
         <h2 class="section-title">My Skills</h2>
         <div class="skills-grid">
             <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="skill-icon">
                 <h3>HTML</h3>
             </div>
             <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="skill-icon">
                 <h3>CSS</h3>
             </div>
             <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
                 <h3>JavaScript</h3>
             </div>
             <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-icon">
                 <h3>React JS</h3>
             </div>
             <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-icon">
                 <h3>Bootstrap</h3>
             </div>
             <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon">
                 <h3>MySQL</h3>
             </div>
             <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-icon">
                 <h3>Java</h3>
             </div>
             <div class="skill-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="UI/UX" class="skill-icon">
                 <h3>UI/UX Design</h3>
             </div>
             <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="skill-icon">
                 <h3>Figma</h3>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" class="skill-icon">
+                <h3>WordPress</h3>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator" class="skill-icon">
+                <h3>Illustrator</h3>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" class="skill-icon">
+                <h3>Photoshop</h3>
             </div>
         </div>
     </section>
@@ -442,7 +528,7 @@
         <div class="projects-grid">
             <div class="project-card">
                 <h3>Internet Banking Website</h3>
-                <p>Development of Internet Banking Website with Enhanced Security Features for MCA Final Year Project.</p>
+                <p>Development of Internet Banking Website with Enhanced Security Features for MCA Final Year Project. Implemented secure authentication, transaction management, and API integration.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">HTML</span>
                     <span class="tech-tag">CSS</span>
@@ -454,7 +540,7 @@
             </div>
             <div class="project-card">
                 <h3>Responsive Calculator</h3>
-                <p>Build calculator application using pure JavaScript and HTML with responsive design.</p>
+                <p>Built a fully functional calculator application using pure JavaScript and HTML with responsive design for all devices.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">JavaScript</span>
                     <span class="tech-tag">HTML</span>
@@ -463,13 +549,54 @@
             </div>
             <div class="project-card">
                 <h3>Grocery List App</h3>
-                <p>Basic CRUD operations with web local storage using pure JavaScript.</p>
+                <p>Developed a grocery list application with complete CRUD operations using web local storage for data persistence.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">JavaScript</span>
                     <span class="tech-tag">HTML</span>
                     <span class="tech-tag">CSS</span>
                     <span class="tech-tag">Local Storage</span>
                 </div>
+            </div>
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Created a modern and responsive portfolio website showcasing projects and skills with smooth animations and interactive UI elements.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Responsive Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <h3>Cloud Computing Elite</h3>
+                <p>Provided by: NPTEL, IIT Kharagpur</p>
+                <a href="https://drive.google.com/file/d/13ix3zBSP9ZJP1K6z-tjaFTexAHW_1GZ5/view?usp=drive_link" class="cert-link" target="_blank">View Certificate</a>
+            </div>
+            <div class="cert-card">
+                <h3>JavaScript Developer</h3>
+                <p>Provided by: C# Corner - July 2024</p>
+                <a href="https://drive.google.com/file/d/1oklqzF4PLPdshyGcdHusuOvazKsjKTkL/view?usp=drive_link" class="cert-link" target="_blank">View Certificate</a>
+            </div>
+            <div class="cert-card">
+                <h3>Web Developer</h3>
+                <p>Provided by: C# Corner - August 2024</p>
+                <a href="https://drive.google.com/file/d/1kFkJKPrU7Ce2D_OxU24pPkAIaiOmHXeG/view?usp=drive_link" class="cert-link" target="_blank">View Certificate</a>
+            </div>
+            <div class="cert-card">
+                <h3>Programming in HTML5 with JavaScript and CSS3</h3>
+                <p>Provided by: C# Corner - August 2024</p>
+                <a href="https://drive.google.com/file/d/14macQkTou9YjNLQS_W5cfn5x3RoDFxqB/view?usp=drive_link" class="cert-link" target="_blank">View Certificate</a>
+            </div>
+            <div class="cert-card">
+                <h3>Web Design Training</h3>
+                <p>Completed by: Magic Bus India Foundation<br>HTML, CSS, JavaScript, Bootstrap, React, WordPress, UI/UX, Figma, Photoshop, Illustrator</p>
+                <a href="#" class="cert-link" target="_blank">View Certificate</a>
             </div>
         </div>
     </section>
@@ -493,7 +620,7 @@
     </section>
 
     <script>
-        // Smooth scrolling for navigation links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -507,14 +634,13 @@
             });
         });
 
-        // Active navigation link on scroll
+        // Active navigation
         window.addEventListener('scroll', () => {
             let current = '';
             const sections = document.querySelectorAll('.section, .hero');
             
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
                 if (scrollY >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
